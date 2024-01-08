@@ -1,10 +1,27 @@
-import { Text, Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
+import {
+  Text,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Image,
+  Heading,
+  Stack,
+} from "@chakra-ui/react";
+import { Game } from "../hooks/useGame";
 
-const GameCard = () => {
+interface Prop {
+  game: Game;
+}
+
+const GameCard = ({ game }: Prop) => {
   return (
-    <Card>
+    <Card borderRadius={10} overflow="hidden">
+      <Image src={game.background_image} alt={game.name}></Image>
       <CardBody>
-        <Text>View a summary of all your customers over the last month.</Text>
+        <Stack>
+          <Heading size="md">{game.name}</Heading>
+        </Stack>
       </CardBody>
     </Card>
   );
