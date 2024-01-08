@@ -1,4 +1,4 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import { ThemeToggle } from "./ThemeToggle";
 
 export const NavBar = () => {
