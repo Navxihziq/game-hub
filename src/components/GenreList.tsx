@@ -1,5 +1,9 @@
+import useGenres from "../hooks/useGenres";
+
 function GenreList() {
-  return <div>GenreList</div>;
+  const { data, error } = useGenres();
+  console.log(data);
+  return <>{data && data.map((genre) => <p>{genre.name}</p>)}</>;
 }
 
 export default GenreList;
