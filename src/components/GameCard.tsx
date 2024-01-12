@@ -9,6 +9,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { Game } from "../hooks/useGame";
+import PlatfromList from "./PlatfromList";
 
 interface Prop {
   game: Game;
@@ -21,6 +22,7 @@ const GameCard = ({ game }: Prop) => {
       <CardBody>
         <Stack>
           <Heading size="md">{game.name}</Heading>
+          <PlatfromList platforms={game.platforms} />
         </Stack>
       </CardBody>
     </Card>
