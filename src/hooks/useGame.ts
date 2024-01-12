@@ -29,8 +29,10 @@ interface GameListResponse {
 const useGame = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     const controller = new AbortController();
 
     apiClient
@@ -41,12 +43,15 @@ const useGame = () => {
       .catch((err) => {
         if (err instanceof CanceledError) return;
         setError(err.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
 
     return () => controller.abort();
   }, []);
 
-  return { games, error, setGames, setError };
+  return { games, error, isLoading, setGames, setError, setIsLoading };
 };
 
 export default useGame;
