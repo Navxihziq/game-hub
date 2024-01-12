@@ -18,6 +18,7 @@ export interface Game {
   rating: number;
   background_image: string;
   platforms: PlatformResponseUnit[];
+  parent_platforms: { platform: Platform }[];
 }
 
 interface GameListResponse {

@@ -5,6 +5,7 @@ import useGame from "../hooks/useGame";
 
 const GameGrid = () => {
   const { games, error, setGames, setError } = useGame();
+  console.log(games);
 
   return (
     <>

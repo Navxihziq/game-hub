@@ -22,7 +22,11 @@ const GameCard = ({ game }: Prop) => {
       <CardBody>
         <Stack>
           <Heading size="md">{game.name}</Heading>
-          <PlatfromList platforms={game.platforms} />
+          <PlatfromList
+            platforms={game.parent_platforms.map(
+              (platform) => platform.platform
+            )}
+          />
         </Stack>
       </CardBody>
     </Card>
