@@ -6,7 +6,7 @@ import {
   Stack,
   HStack,
 } from "@chakra-ui/react";
-import { Game } from "../hooks/useGame";
+import { Game } from "../hooks/useGames";
 import PlatfromList from "./PlatfromList";
 import CriticsScore from "./CriticsScore";
 
