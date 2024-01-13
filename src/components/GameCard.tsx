@@ -23,7 +23,7 @@ const GameCard = ({ game }: Prop) => {
         alt={game.name}
       ></Image>
       <CardBody>
-        <Heading marginBottom={3} size="md">
+        <Heading marginBottom={1} size="md">
           {game.name}
         </Heading>
         <Stack>
