@@ -23,7 +23,9 @@ const GameCard = ({ game }: Prop) => {
         alt={game.name}
       ></Image>
       <CardBody>
-        <Heading size="md">{game.name}</Heading>
+        <Heading marginBottom={3} size="md">
+          {game.name}
+        </Heading>
         <Stack>
           <HStack alignItems="center">
             <PlatfromList
