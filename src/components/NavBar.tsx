@@ -9,10 +9,10 @@ interface Props {
 export const NavBar = ({ onSearch }: Props) => {
   return (
     <>
-      <HStack height={20} padding="10px">
+      <HStack padding="10px">
         <Image
           w="15vw"
-          maxW="60px"
+          boxSize="60px"
           src="./src/assets/logo.webp"
           alt="logo of GameHub"
         />

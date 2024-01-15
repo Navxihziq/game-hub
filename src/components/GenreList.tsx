@@ -1,4 +1,11 @@
-import { List, ListItem, Image, Button, HStack } from "@chakra-ui/react";
+import {
+  List,
+  ListItem,
+  Image,
+  Button,
+  HStack,
+  Heading,
+} from "@chakra-ui/react";
 import { useState } from "react";
 
 import useGenres, { Genre } from "../hooks/useGenres";
@@ -13,6 +20,9 @@ function GenreList({ onSelectGenre }: Props) {
 
   return (
     <>
+      <Heading fontSize="2xl" marginTop={9} marginBottom={3}>
+        Genres
+      </Heading>
       <List>
         {data &&
           data.map((genre) => (
