@@ -7,6 +7,7 @@ import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/usePlatforms";
 import SortSelector from "./components/SortSelector";
+import { GameHeading } from "./components/GameHeading";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -17,6 +18,7 @@ export interface GameQuery {
 
 export const App = () => {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  const [heading, setHeading] = useState("Games");
   return (
     <>
       <Grid
@@ -29,6 +31,7 @@ export const App = () => {
           <NavBar
             onSearch={(query: string) => {
               setGameQuery({ ...gameQuery, search: query });
+              setHeading("Result for " + query);
             }}
           />
         </GridItem>
@@ -38,12 +41,14 @@ export const App = () => {
             <GenreList
               onSelectGenre={(genre) => {
                 setGameQuery({ ...gameQuery, genre: genre });
+                setHeading(genre.name + " " + "Games");
               }}
             />
           </GridItem>
         </Show>
         <GridItem area="main">
-          <VStack padding={10} align={"start"}>
+          <VStack paddingX={10} align={"start"}>
+            <GameHeading heading={heading} />
             <HStack>
               <PlatformSelector
                 onSelectPlatform={(platform: Platform) => {
