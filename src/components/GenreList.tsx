@@ -31,7 +31,9 @@ function GenreList({ onSelectGenre }: Props) {
                   }}
                   fontSize={"md"}
                   variant={"link"}
-                  fontWeight={selectedGenre === genre.name ? "bold" : "regular"}
+                  fontWeight={
+                    selectedGenre === genre.name ? "extrabold" : "normal"
+                  }
                 >
                   {genre.name}
                 </Button>
