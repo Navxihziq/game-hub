@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Game Hub is a simple front-end application that allows users to explore games of different genres and platforms. Users can also search for games by name.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can check out the live demo of Game Hub at https://game-hub.zhixuanqi.com/.
 
-## Expanding the ESLint configuration
+Note: Due to API constraints, frequent requests are subject to rate limiting.
+Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To run Game Hub locally, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+    Clone the repository: git clone https://github.com/your-username/game-hub.git
+    Install dependencies: npm install
+    Start the development server: npm start
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Usage
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Once the application is running, you can explore games by genre or platform. You can also use the search functionality to find games by name.
+Contributing
+
+Contributions are welcome! If you'd like to contribute to Game Hub, please follow these steps:
+
+    Fork the repository
+    Create a new branch: git checkout -b feature/your-feature
+    Make your changes and commit them: git commit -m 'Add your feature'
+    Push to the branch: git push origin feature/your-feature
+    Submit a pull request
+
+## Credits
+
+This application was built by following the tutorial from Code with Mosh.
+License
+
+This project is licensed under the MIT License.
