@@ -13,7 +13,7 @@ export const NavBar = ({ onSearch }: Props) => {
         <Image
           w="15vw"
           boxSize="60px"
-          src="./src/assets/logo.webp"
+          src="/src/assets/logo.webp"
           alt="logo of GameHub"
         />
         <SearchInput onSearch={onSearch} />
