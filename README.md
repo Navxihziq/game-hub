@@ -31,6 +31,7 @@ Contributions are welcome! If you'd like to contribute to Game Hub, please follo
 ## Credits
 
 This application was built by following the tutorial from Code with Mosh.
-License
+
+## License
 
 This project is licensed under the MIT License.
